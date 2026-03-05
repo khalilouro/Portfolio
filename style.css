@@ -579,16 +579,17 @@ body {
     }
 
     .book{
-        width:220%;
+        width:250%;
         height:100%;
     }
 
     .cover.cover-left{
-        width: 110%;
+        width: 125%;
     }
 
     .cover.cover-right{
-        width: 110%;
+        width: 125%;
     }
+
 
 }
