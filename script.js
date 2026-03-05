@@ -98,3 +98,22 @@ pages.forEach((_, index) => {
 
     }, (index + 1) * 200 + 2100)
 })
+
+function sendMail(event) {
+
+    event.preventDefault(); // empêche le reload de la page
+
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_h0s5pvl", "template_d3r25ai", parms)
+    .then(function(response) {
+        alert("Email Sent !");
+    }, function(error) {
+        alert("Error sending email");
+    });
+
+}

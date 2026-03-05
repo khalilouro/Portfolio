@@ -11,6 +11,16 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- devicon icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "tRgAPnoowmlR5gIEc",
+        });
+    })();
+    </script>
 </head>
 
 <body>
@@ -29,10 +39,8 @@
                         <h3>Web Developer</h3>
 
                         <div class="social-media">
-                            <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-twitter'></i></a>
-                            <a href="#"><i class='bx bxl-instagram'></i></a>
-                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/khalilouro"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/mohamed-khalil-rahmouni-6b867b36b/"><i class='bx bxl-linkedin'></i></a>
                         </div>
 
                         <p>Étudiant en L3 MIAGE à l’Université Côte d’Azur.<br>
@@ -41,7 +49,7 @@
                         </p>
 
                         <div class="btn-box">
-                            <a href="#" class="btn">Download CV</a>
+                            <a href="Cv.pdf" class="btn">Download CV</a>
                             <a href="#" class="btn contact-me">Contact Me</a>
                         </div>
                     </div>
@@ -145,28 +153,36 @@
                             <i class='bx bx-code-alt'></i>
                             <h3>Développement d’applications web</h3>
                             <p>Conception d’applications web dynamiques avec gestion des utilisateurs, bases de données et interfaces interactives.</p>
+                            <!--
                             <a href="#" class="btn">Read More</a>
+                            -->
                         </div>
 
                         <div class="services-content">
                             <i class='bx bxs-paint'></i>
                             <h3>Conception & gestion de bases de données</h3>
                             <p>Modélisation de bases de données (MCD/MLD) et création de requêtes SQL pour gérer et exploiter les données.</p>
+                            <!--
                             <a href="#" class="btn">Read More</a>
+                            -->
                         </div>
 
                         <div class="services-content">
                             <i class='bx bx-bar-chart-alt'></i>
                             <h3>Développement d’API REST</h3>
                             <p>Création d’API permettant la communication entre les interfaces web et les bases de données.</p>
+                            <!--
                             <a href="#" class="btn">Read More</a>
+                            -->
                         </div>
 
                         <div class="services-content">
                             <i class='bx bx-search'></i>
                             <h3>Analyse de données & automatisation</h3>
                             <p>Analyse et traitement de données avec Python et R pour automatiser certaines tâches.</p>
+                            <!--
                             <a href="#" class="btn">Read More</a>
+                            -->
                         </div>
                     </div>
 
@@ -203,8 +219,8 @@
                         </div>
 
                         <div class="btn-box">
-                            <a href="#" class="btn">Source Code</a>
-                            <a href="#" class="btn">More Projects</a>
+                            <a href="https://github.com/khalilouro/games_on_web" class="btn">Source Code</a>
+                            <a href="projet.html" class="btn">More Projects</a>
                         </div>
                     </div>
 
@@ -266,14 +282,14 @@
                     <h1 class="title">Contact Me!</h1>
 
                     <div class="contact-box">
-                        <form action="contact.php" method="POST">
-                            <input type="text" class="field" placeholder="Full Name" required>
-                            <input type="email" class="field" placeholder="Email Address" required>
-                            <textarea cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
+                        <form onsubmit="sendMail(event)">
+                            <input type="text" id="name" class="field" placeholder="Full Name" required>
+                            <input type="email" id="email" class="field" placeholder="Email Address" required>
+                            <input type="text" id="subject" class="field" placeholder="Subject" required>
+                            <textarea id="message" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
                             <input type="submit" class="btn" value="Send Message">
                         </form>
                     </div>
-
                     <span class="number-page">6</span>
 
                     <!-- prev button -->
