@@ -422,20 +422,19 @@ body {
 .skills-content .content {
     display: flex;
     flex-wrap: wrap;
-    gap: .8rem;
+    gap: .5rem;
     align-items: center;
 }
 
 .skills-content .content span {
-    display: inline-flex;
-    flex-direction: column;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 4rem;
+    width: 4rem;
+    height: 3rem;
     border: var(--border);
     border-radius: .4rem;
-    font-weight: 600;
     transition: .3s ease;
 }
 
@@ -446,6 +445,24 @@ body {
 .skills-content .content span i {
     font-size: 2rem;
     color: var(--main-color);
+}
+
+.skills-content .content span:hover i {
+    opacity: 0;
+}
+
+.skills-content .content span p {
+    position: absolute;
+    left: 30px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateX(-50%) scale(.5);
+    transition: .5s;
+}    
+
+.skills-content .content span:hover p {
+    opacity: 1;
+    transform: translate(-50%) scale(1);
 }
 
 .portfolio-box .img-box {
@@ -569,7 +586,7 @@ body {
 .back-profile:hover p {
     opacity: 1;
     transform: translateX(-50%) scale(1);
-    top: -1.8rem;
+    top: -2.5rem;
 }
 
 @media (max-width:768px){
