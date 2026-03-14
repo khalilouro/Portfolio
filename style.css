@@ -603,27 +603,3 @@ body {
     transform: translateX(-50%) scale(1);
     top: -2.5rem;
 }
-
-@media (max-width:768px) {
-
-    .wrapper {
-        width: 100vw;
-        height: 100vh;
-        padding: 0.5rem;
-    }
-
-    .book {
-        width: 250%;
-        height: 100%;
-    }
-
-    .cover.cover-left {
-        width: 125%;
-    }
-
-    .cover.cover-right {
-        width: 125%;
-    }
-
-
-}
