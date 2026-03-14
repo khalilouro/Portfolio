@@ -1,15 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
+    <title>Mes Projets | Khalil Portfolio</title>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="projet.css">
 </head>
+
 <body>
 
-    <h1>Cette Section sera bientôt disponible. Merci pour votre Compréhensio !</h1>
-    
+    <header class="project-header">
+        <a href="index.html" class="back-home">
+            <i class='bx bx-left-arrow-alt'></i>
+            <span>Retour au Portfolio</span>
+        </a>
+        <h1 class="main-title">Mes Réalisations</h1>
+    </header>
+
+    <main class="project-container">
+        <!-- Project 1: Games On Web -->
+        <article class="project-card HTML">
+            <div class="card-img">
+                <img src="games_on_web.png" alt="Games On Web Preview">
+                <div class="card-overlay">
+                    <div class="card-links">
+                        <a href="https://github.com/khalilouro/games_on_web" target="_blank" title="Code Source"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://games-on-web-eta.vercel.app/" target="_blank" title="Démo Live"><i
+                                class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2 class="project-name">Games On Web</h2>
+                <p class="project-desc">Une plateforme de jeux en ligne interactive avec gestion d'utilisateurs et
+                    scores en temps réel.</p>
+                <div class="tech-stack">
+                    <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+                    <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+                    <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                    <i class="devicon-html5-plain colored" title="HTML5"></i>
+                </div>
+            </div>
+        </article>
+
+        <!--Projet 2 : JAVA-->
+        <article class="project-card Java">
+
+            <div class="card-img">
+                <img src="seven-wonders.jpg" alt="Seven Wonders Java">
+
+                <div class="card-overlay">
+                    <div class="card-links">
+
+                        <a href="https://github.com/UCA-DS4H-MIAGE-L3/projet7wonders-groupe-a" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <h2 class="project-name">Seven Wonders AI</h2>
+
+                <p class="project-desc">
+                    Implémentation du jeu Seven Wonders en Java avec développement
+                    d'un bot stratégique et gestion complète de la logique du jeu.
+                </p>
+
+                <div class="tech-stack">
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-git-plain colored"></i>
+                    <i class="devicon-github-plain"></i>
+                    <i class="devicon-json-plain"></i>
+                    <i class="devicon-markdown-plain"></i>
+                    <i class="devicon-mermaid-plain"></i>
+                    <i class="devicon-maven-plain"></i>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Project 3: Valisp - Lisp Interpreter -->
+        <article class="project-card valisp-card">
+            <div class="valisp-info">
+                <h2 class="project-name">Interpréteur Valisp</h2>
+                <p class="project-desc">Un interpréteur LISP complet écrit en C, doté d'un ramasse-miettes (Garbage
+                    Collector) et d'un allocateur mémoire personnalisé.</p>
+                <div class="tech-highlights">
+                    <div class="highlight-item">
+                        <i class='bx bx-chip'></i>
+                        <span>Allocateur maison</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class='bx bx-recycle'></i>
+                        <span>Garbage Collector</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class='bx bx-code-block'></i>
+                        <span>Polymorphisme C</span>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <i class="devicon-c-plain colored" title="C"></i>
+                    <i class="devicon-linux-plain colored" title="Linux"></i>
+                    <i class="devicon-gcc-plain colored" title="GCC"></i>
+                </div>
+                <a href="https://github.com/khalilouro/Valisp" target="_blank" class="btn-github">
+                    <i class='bx bxl-github'></i> Voir le Code Source
+                </a>
+            </div>
+
+            <div class="valisp-preview">
+                <div class="valisp-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">valisp — terminal — 80x24</div>
+                    </div>
+                    <div class="valisp-terminal" id="valisp-terminal" tabindex="0">
+                        <pre class="valisp-logo" style="margin-top: 10px; font-weight: bold; font-family: monospace; line-height: 1.15; color: #27c93f;">
+            _ _           
+__   ____ _| (_)___ _ __  
+\ \ / / _` | | / __| '_ \ 
+ \ V / (_| | | \__ \ |_) |
+  \_/ \__,_|_|_|___/ .__/ 
+                   |_|    </pre>
+                        <div class="valisp-history" id="terminal-history">
+                            <div class="system-msg">Initialisation mémoire [OK]</div>
+                            <div class="system-msg">Chargement des primitives [OK]</div>
+                            <div class="disclaimer-msg">
+                                <i class='bx bx-info-circle'></i> Ceci est une simulation web.<br>
+                                Pour exécuter le vrai projet chez vous (Linux/WSL) :<br>
+                                <span class="code-highlight">sudo apt install build-essential libreadline-dev</span><br>
+                                <span class="code-highlight">make</span><br>
+                                <span class="code-highlight">./valisp</span><br>
+                                <span class="code-highlight">pour l'instant vous pouvez faire (+ 1 2), help, clear et
+                                    hello</span>
+                            </div>
+                        </div>
+                        <div id="terminal-interactive-line" class="terminal-line">
+                            <span class="prompt">vaλisp></span>
+                            <span class="typing" id="terminal-typing"></span>
+                            <span class="cursor"></span>
+                        </div>
+                        <input type="text" id="terminal-input"
+                            style="position: absolute; opacity: 0; pointer-events: none;" autofocus>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 4: R Analysis -->
+        
+        <!-- Base Convert -->
+
+        <article class="project-card R">
+
+            <div class="card-img">
+                <iframe 
+                    src="https://rmkhalil.shinyapps.io/base-converter/"
+                    width="100%" 
+                    height="250"
+                    style="border:none;">
+                </iframe>
+
+                <div class="card-overlay">
+                    <div class="card-links">
+                        <a href="https://github.com/khalilouro/R/tree/main/base-converter" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+
+                        <a href="https://rmkhalil.shinyapps.io/base-converter/" target="_blank">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <h2 class="project-name">Base Converter</h2>
+                <p class="project-desc">
+                    Application interactive développée avec R et Shiny permettant la conversion
+                    de nombres entre différentes bases numériques.
+                </p>
+
+                <div class="tech-stack">
+                    <i class="devicon-r-plain colored"></i>
+                    <i class="devicon-rstudio-plain colored"></i>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Estimation moyenne -->
+        <article class="project-card R">
+
+            <div class="card-img">
+                <iframe 
+                    src="https://rmkhalil.shinyapps.io/estimation-moyenne/"
+                    width="100%" 
+                    height="250"
+                    style="border:none;">
+                </iframe>
+
+                <div class="card-overlay">
+                    <div class="card-links">
+                        <a href="https://github.com/khalilouro/R/tree/main/estimation-moyenne" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+
+                        <a href="https://rmkhalil.shinyapps.io/estimation-moyenne/" target="_blank">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <h2 class="project-name">Estimation de Moyenne</h2>
+                <p class="project-desc">
+                    Application interactive en R permettant l'estimation statistique
+                    d'une moyenne à partir de données.
+                </p>
+
+                <div class="tech-stack">
+                    <i class="devicon-r-plain colored"></i>
+                    <i class="devicon-rstudio-plain colored"></i>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <div class="projects-note">
+        <p>
+            Les projets présentés ci-dessus ont été réalisés dans le cadre de mon parcours académique.
+            Certains projets personnels ne sont pas encore déployés ou sont actuellement en cours de développement.
+        </p>
+    </div>
+
+    <script src="projet.js"></script>
 </body>
+
 </html>
