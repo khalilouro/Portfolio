@@ -8,7 +8,8 @@ body {
     padding: 0;
     min-height: 100vh;
     overflow-y: auto;
-    display: block !important; /* Override flex from style.css */
+    display: block !important;
+    /* Override flex from style.css */
 }
 
 .project-header {
@@ -190,13 +191,13 @@ body {
     transform: scale(1.2);
 }
 
-.projects-note{
-    text-align:center;
-    margin-top:40px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-    color:#9aa6b2;
+.projects-note {
+    text-align: center;
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #9aa6b2;
 }
 
 
@@ -208,11 +209,11 @@ body {
         gap: 1rem;
         text-align: center;
     }
-    
+
     .main-title {
         font-size: 1.5rem;
     }
-    
+
     .project-container {
         margin: 2rem auto;
     }
@@ -220,7 +221,8 @@ body {
 
 /* Valisp Card Specifics - 2 Column Layout */
 .valisp-card {
-    grid-column: 1 / -1; /* Make it take full row */
+    grid-column: 1 / -1;
+    /* Make it take full row */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 0;
@@ -240,7 +242,8 @@ body {
 }
 
 .valisp-info .project-desc {
-    height: auto; /* Remove line clamp for full description */
+    height: auto;
+    /* Remove line clamp for full description */
     margin-bottom: 2rem;
 }
 
@@ -281,11 +284,12 @@ body {
     background: #111;
     display: flex;
     flex-direction: column;
-    height: 350px; /* Taller terminal */
+    height: 350px;
+    /* Taller terminal */
     padding: 0;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
 }
 
@@ -310,9 +314,17 @@ body {
     border-radius: 50%;
 }
 
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
 
 .terminal-title {
     color: #888;
@@ -350,12 +362,36 @@ body {
     line-height: 1.1;
 }
 
-.valisp-logo .v { color: #27c93f; } /* Green */
-.valisp-logo .a { color: #27c93f; } /* Green */
-.valisp-logo .l { color: #ffbd2e; } /* Yellow/Lambda */
-.valisp-logo .i { color: #27c93f; } /* Green */
-.valisp-logo .s { color: #27c93f; } /* Green */
-.valisp-logo .p { color: #27c93f; } /* Green */
+.valisp-logo .v {
+    color: #27c93f;
+}
+
+/* Green */
+.valisp-logo .a {
+    color: #27c93f;
+}
+
+/* Green */
+.valisp-logo .l {
+    color: #ffbd2e;
+}
+
+/* Yellow/Lambda */
+.valisp-logo .i {
+    color: #27c93f;
+}
+
+/* Green */
+.valisp-logo .s {
+    color: #27c93f;
+}
+
+/* Green */
+.valisp-logo .p {
+    color: #27c93f;
+}
+
+/* Green */
 
 .system-msg {
     color: #666;
@@ -411,7 +447,9 @@ body {
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Tech Highlights */

@@ -238,18 +238,48 @@ section {
     animation: rotate 3.5s linear infinite;
 }
 
-.loader:nth-child(1) { animation-delay: 0.15s; }
-.loader:nth-child(2) { animation-delay: 0.3s; }
-.loader:nth-child(3) { animation-delay: 0.45s; }
-.loader:nth-child(4) { animation-delay: 0.6s; }
-.loader:nth-child(5) { animation-delay: 0.75s; }
+.loader:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.loader:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.loader:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loader:nth-child(5) {
+    animation-delay: 0.75s;
+}
 
 @keyframes rotate {
-    30% { transform: rotate(220deg); }
-    40% { transform: rotate(450deg); }
-    75% { transform: rotate(720deg); opacity: 1; }
-    76% { opacity: 0; }
-    100% { transform: rotate(0deg); opacity: 0; }
+    30% {
+        transform: rotate(220deg);
+    }
+
+    40% {
+        transform: rotate(450deg);
+    }
+
+    75% {
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+
+    76% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
 }
 
 .loader .dot {
@@ -270,37 +300,52 @@ section {
     background: var(--bg-color);
 }
 
-.skills-row {
+.skills-category {
+    margin-bottom: 4rem;
+}
+
+.skills-category h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.skill-item {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-}
-
-.skills-column .title {
-    font-size: 2.2rem;
-    margin: 0 0 1.5rem;
-}
-
-.skills-box {
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    padding: 2rem;
-}
-
-.skills-content .progress {
-    padding: 1rem 0;
-}
-
-.skills-content .progress h3 {
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 1.5rem;
+    background: rgba(0, 171, 240, 0.05);
+    transition: .5s ease;
+    cursor: pointer;
 }
 
-.skills-content .progress h3 span {
-    font-size: 2rem;
+.skill-item:hover {
+    background: rgba(0, 171, 240, 0.15);
+    transform: translateY(-0.5rem);
+}
+
+.skill-item i {
+    font-size: 4rem;
     color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
 }
 
 .services-container {
@@ -374,7 +419,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -480,8 +525,8 @@ section {
     width: 100%;
     background: var(--bg-color);
     padding: 1rem 7%;
-    border-top: .1rem solid rgba(0,0,0,.2);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .navbar a {

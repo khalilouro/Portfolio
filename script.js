@@ -117,12 +117,25 @@ function sendMail(event) {
 
     emailjs.send("service_h0s5pvl", "template_d3r25ai", parms)
         .then(function (response) {
-            alert("Email Sent !");
+            const isFr = document.documentElement.lang === 'fr' || !window.location.pathname.includes('_en.html');
+            alert(isFr ? "Email Envoyé !" : "Email Sent !");
         }, function (error) {
-            alert("Error sending email");
+            const isFr = document.documentElement.lang === 'fr' || !window.location.pathname.includes('_en.html');
+            alert(isFr ? "Erreur lors de l'envoi de l'email" : "Error sending email");
         });
 
 }
 
+/* gérer la langue */
+
+const langue = navigator.language || navigator.userLanguage;
+
+if (langue.startsWith("fr")) {
+    // Français
+    document.documentElement.lang = "fr";
+} else {
+    // Anglais
+    document.documentElement.lang = "en";
+}
 
 

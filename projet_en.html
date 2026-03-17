@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets | Khalil Portfolio</title>
+    <title>My Projects | Khalil's Portfolio</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -13,18 +13,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="projet.css">
     <script>
-        // Redirection pays si hors de France
+        // Redirect to FR version if user is in France
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
-                if (data.country_code && data.country_code !== 'FR') {
-                    window.location.href = "projet_en.html";
+                if (data.country_code === 'FR') {
+                    window.location.href = "projet.html";
                 }
             })
             .catch(error => {
                 const userLang = navigator.language || navigator.userLanguage;
-                if (!userLang.startsWith("fr")) {
-                    window.location.href = "projet_en.html";
+                if (userLang.startsWith("fr")) {
+                    window.location.href = "projet.html";
                 }
             });
     </script>
@@ -33,11 +33,11 @@
 <body>
 
     <header class="project-header">
-        <a href="index.html" class="back-home">
+        <a href="index_en.html" class="back-home">
             <i class='bx bx-left-arrow-alt'></i>
-            <span>Retour au Portfolio</span>
+            <span>Back to Portfolio</span>
         </a>
-        <h1 class="main-title">Mes Réalisations</h1>
+        <h1 class="main-title">My Projects</h1>
     </header>
 
     <main class="project-container">
@@ -47,17 +47,16 @@
                 <img src="games_on_web.png" alt="Games On Web Preview">
                 <div class="card-overlay">
                     <div class="card-links">
-                        <a href="https://github.com/khalilouro/games_on_web" target="_blank" title="Code Source"><i
+                        <a href="https://github.com/khalilouro/games_on_web" target="_blank" title="Source Code"><i
                                 class='bx bxl-github'></i></a>
-                        <a href="https://games-on-web-eta.vercel.app/" target="_blank" title="Démo Live"><i
+                        <a href="https://games-on-web-eta.vercel.app/" target="_blank" title="Live Demo"><i
                                 class='bx bx-link-external'></i></a>
                     </div>
                 </div>
             </div>
             <div class="card-content">
                 <h2 class="project-name">Games On Web</h2>
-                <p class="project-desc">Une plateforme de jeux en ligne interactive avec gestion d'utilisateurs et
-                    scores en temps réel.</p>
+                <p class="project-desc">An interactive online gaming platform with user management and real-time scores.</p>
                 <div class="tech-stack">
                     <i class="devicon-nodejs-plain colored" title="Node.js"></i>
                     <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
@@ -88,8 +87,7 @@
                 <h2 class="project-name">Seven Wonders AI</h2>
 
                 <p class="project-desc">
-                    Implémentation du jeu Seven Wonders en Java avec développement
-                    d'un bot stratégique et gestion complète de la logique du jeu.
+                    Implementation of the Seven Wonders game in Java with strategic bot development and full game logic management.
                 </p>
 
                 <div class="tech-stack">
@@ -109,13 +107,12 @@
         <!-- Project 3: Valisp - Lisp Interpreter -->
         <article class="project-card valisp-card">
             <div class="valisp-info">
-                <h2 class="project-name">Interpréteur Valisp</h2>
-                <p class="project-desc">Un interpréteur LISP complet écrit en C, doté d'un ramasse-miettes (Garbage
-                    Collector) et d'un allocateur mémoire personnalisé.</p>
+                <h2 class="project-name">Valisp Interpreter</h2>
+                <p class="project-desc">A complete LISP interpreter written in C, featuring a custom Garbage Collector and memory allocator.</p>
                 <div class="tech-highlights">
                     <div class="highlight-item">
                         <i class='bx bx-chip'></i>
-                        <span>Allocateur maison</span>
+                        <span>Custom Allocator</span>
                     </div>
                     <div class="highlight-item">
                         <i class='bx bx-recycle'></i>
@@ -123,7 +120,7 @@
                     </div>
                     <div class="highlight-item">
                         <i class='bx bx-code-block'></i>
-                        <span>Polymorphisme C</span>
+                        <span>C Polymorphism</span>
                     </div>
                 </div>
                 <div class="tech-stack">
@@ -132,7 +129,7 @@
                     <i class="devicon-gcc-plain colored" title="GCC"></i>
                 </div>
                 <a href="https://github.com/khalilouro/Valisp" target="_blank" class="btn-github">
-                    <i class='bx bxl-github'></i> Voir le Code Source
+                    <i class='bx bxl-github'></i> View Source Code
                 </a>
             </div>
 
@@ -152,20 +149,19 @@
             _ _           
 __   ____ _| (_)___ _ __  
 \ \ / / _` | | / __| '_ \ 
- \ V / (_| | | \__ \ |_) |
+ Drum \ V / (_| | | \__ \ |_) |
   \_/ \__,_|_|_|___/ .__/ 
                    |_|    </pre>
                         <div class="valisp-history" id="terminal-history">
-                            <div class="system-msg">Initialisation mémoire [OK]</div>
-                            <div class="system-msg">Chargement des primitives [OK]</div>
+                            <div class="system-msg">Memory initialization [OK]</div>
+                            <div class="system-msg">Loading primitives [OK]</div>
                             <div class="disclaimer-msg">
-                                <i class='bx bx-info-circle'></i> Ceci est une simulation web.<br>
-                                Pour exécuter le vrai projet chez vous (Linux/WSL) :<br>
+                                <i class='bx bx-info-circle'></i> This is a web simulation.<br>
+                                To run the real project on your machine (Linux/WSL):<br>
                                 <span class="code-highlight">sudo apt install build-essential libreadline-dev</span><br>
                                 <span class="code-highlight">make</span><br>
                                 <span class="code-highlight">./valisp</span><br>
-                                <span class="code-highlight">pour l'instant vous pouvez faire (+ 1 2), help, clear et
-                                    hello</span>
+                                <span class="code-highlight">currently, you can type (+ 1 2), help, clear, and hello</span>
                             </div>
                         </div>
                         <div id="terminal-interactive-line" class="terminal-line">
@@ -207,8 +203,7 @@ __   ____ _| (_)___ _ __
             <div class="card-content">
                 <h2 class="project-name">Base Converter</h2>
                 <p class="project-desc">
-                    Application interactive développée avec R et Shiny permettant la conversion
-                    de nombres entre différentes bases numériques.
+                    Interactive application developed with R and Shiny for converting numbers between different bases.
                 </p>
 
                 <div class="tech-stack">
@@ -241,10 +236,9 @@ __   ____ _| (_)___ _ __
             </div>
 
             <div class="card-content">
-                <h2 class="project-name">Estimation de Moyenne</h2>
+                <h2 class="project-name">Mean Estimation</h2>
                 <p class="project-desc">
-                    Application interactive en R permettant l'estimation statistique
-                    d'une moyenne à partir de données.
+                    Interactive R application for statistical mean estimation from data.
                 </p>
 
                 <div class="tech-stack">
@@ -258,13 +252,11 @@ __   ____ _| (_)___ _ __
 
     <div class="projects-note">
         <p>
-            Les projets présentés ci-dessus ont été réalisés dans le cadre de mon parcours académique.
-            Certains projets personnels ne sont pas encore déployés ou sont actuellement en cours de développement.
+            The projects presented above were realized as part of my academic journey. Some personal projects are not yet deployed or are currently under development.
         </p>
     </div>
 
     <script src="projet.js"></script>
 </body>
-
 
 </html>

@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KhalilPortfolio</title>
+    <title>Portfolio de Khalil</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <!-- box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- devicon icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "tRgAPnoowmlR5gIEc",
-        });
-    })();
+        (function () {
+            emailjs.init({
+                publicKey: "tRgAPnoowmlR5gIEc",
+            });
+        })();
     </script>
     <script>
+        // Redirection mobile
         if (window.innerWidth < 768) {
             window.location.href = "mobile.html";
+        }
+
+        // Détection de pays pour redirection multilingue
+        // On n'exécute la redirection que sur index.html (version FR par défaut)
+        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('Portfolio/')) {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.country_code && data.country_code !== 'FR') {
+                        window.location.href = "index_en.html";
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur de détection IP:', error);
+                    // Repli sur la langue du navigateur si l'API échoue
+                    const userLang = navigator.language || navigator.userLanguage;
+                    if (!userLang.startsWith("fr")) {
+                        window.location.href = "index_en.html";
+                    }
+                });
         }
     </script>
 </head>
@@ -45,18 +64,20 @@
 
                     <div class="social-media">
                         <a href="https://github.com/khalilouro"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.linkedin.com/in/mohamed-khalil-rahmouni-6b867b36b/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-khalil-rahmouni-6b867b36b/"><i
+                                class='bx bxl-linkedin'></i></a>
                         <a href="mailto:rahmounimohamedkhalil@gmail.com"><i class="bx bxl-gmail"></i></a>
                     </div>
 
                     <p>Étudiant en L3 MIAGE à l’Université Côte d’Azur.<br>
                         Chargé de mission qualité trésorerie chez JMC.<br>
-                        À la recherche d’un stage de 3 mois afin de renforcer mes compétences techniques et fonctionnelles.
+                        À la recherche d’un stage de 3 mois afin de renforcer mes compétences techniques et
+                        fonctionnelles.
                     </p>
 
                     <div class="btn-box">
-                        <a href="CV/CV.html" class="btn">Download CV</a>
-                        <a href="#" class="btn contact-me">Contact Me</a>
+                        <a href="CV/CV.html" class="btn">Télécharger le CV</a>
+                        <a href="#" class="btn contact-me">Me Contacter</a>
                     </div>
                 </div>
             </div>
@@ -65,11 +86,11 @@
             <div class="book-page page-right turn" id="turn-1">
                 <!-- page 1 (education) -->
                 <div class="page-front">
-                    <h1 class="title">Education</h1>
+                    <h1 class="title">Éducation</h1>
 
                     <div class="workeduc-box">
                         <div class="workeduc-content">
-                            <span class="year"><i class='bx bxs-calendar'></i>2023 - present</span>
+                            <span class="year"><i class='bx bxs-calendar'></i>2023 - présent</span>
                             <h3>Licence MIAGE - Université Côte d’Azur</h3>
                             <p>Informatique et Développement Logiciel<br>
                                 <span class="desc">Conception, programmation et maintenance d’applications en
@@ -92,7 +113,7 @@
                             <!--
                             <span class="desc">Formation scientifique rigoureuse axée sur les mathématiques, la physique
                                 et la chimie, développant logique et esprit analytique.</span>
-                            --> 
+                            -->
                         </div>
                     </div>
 
@@ -106,64 +127,126 @@
 
                 <!-- page 2 (my skills)-->
                 <div class="page-back">
-                    <h1 class="title">My Skills</h1>
+                    <h1 class="title">Mes Compétences</h1>
 
                     <div class="skills-box">
                         <div class="skills-content">
                             <h3>Front-End</h3>
                             <div class="content">
-                                <span><i class='bx bxl-html5'></i><p>HTML5</p></span>
-                                <span><i class='bx bxl-css3'></i><p> CSS3 </p></span>
-                                <span><i class='bx bxl-javascript'></i><p> JavaScript </p></span>
-                                <span><i class="devicon-babylonjs-plain"></i><p>Babylon.js</p></span>
-                                <span><i class='bx bxl-markdown'></i><p> Markdown </p></span>
-                                <span><i class='bx bx-sitemap'></i><p> Mermaid </p></span>
+                                <span><i class='bx bxl-html5'></i>
+                                    <p>HTML5</p>
+                                </span>
+                                <span><i class='bx bxl-css3'></i>
+                                    <p> CSS3 </p>
+                                </span>
+                                <span><i class='bx bxl-javascript'></i>
+                                    <p> JavaScript </p>
+                                </span>
+                                <span><i class="devicon-babylonjs-plain"></i>
+                                    <p>Babylon.js</p>
+                                </span>
+                                <span><i class='bx bxl-markdown'></i>
+                                    <p> Markdown </p>
+                                </span>
+                                <span><i class='bx bx-sitemap'></i>
+                                    <p> Mermaid </p>
+                                </span>
                             </div>
                         </div>
 
                         <div class="skills-content">
-                            <h3>Programming</h3>
+                            <h3>Programmation</h3>
                             <div class="content">
-                                <span><i class='bx bxl-php'></i><p> PHP </p></span>
-                                <span><i class='bx bxl-nodejs'></i><p> Node.js </p></span>
-                                <span><i class='bx bxl-python'></i><p> Python </p></span>
-                                <span><i class="devicon-c-plain"></i><p> C </p></span>
-                                <span><i class="bx bxl-java"></i><p> Java </p></span>
-                                <span><i class="devicon-r-plain"></i><p> R </p></span>
-                                <span><i class="devicon-kotlin-plain"></i><p> Kotlin </p></span>
-                                <span><i class="bx bx-data"></i><p>SQL</p></span>
-                                <span><i class='devicon-json-plain'></i><p> Json </p></span>
+                                <span><i class='bx bxl-php'></i>
+                                    <p> PHP </p>
+                                </span>
+                                <span><i class='bx bxl-nodejs'></i>
+                                    <p> Node.js </p>
+                                </span>
+                                <span><i class='bx bxl-python'></i>
+                                    <p> Python </p>
+                                </span>
+                                <span><i class="devicon-c-plain"></i>
+                                    <p> C </p>
+                                </span>
+                                <span><i class="bx bxl-java"></i>
+                                    <p> Java </p>
+                                </span>
+                                <span><i class="devicon-r-plain"></i>
+                                    <p> R </p>
+                                </span>
+                                <span><i class="devicon-kotlin-plain"></i>
+                                    <p> Kotlin </p>
+                                </span>
+                                <span><i class="bx bx-data"></i>
+                                    <p>SQL</p>
+                                </span>
+                                <span><i class='devicon-json-plain'></i>
+                                    <p> Json </p>
+                                </span>
 
                             </div>
                         </div>
 
                         <div class="skills-content">
-                            <h3>Database / BI</h3>
+                            <h3>Base de données / BI</h3>
                             <div class="content">
-                                <span><i class="devicon-mysql-plain"></i><p>MySQL</p></span>
-                                <span><i class="bx bxl-mongodb"></i><p>MongoDB</p></span>
-                                <span><i class="devicon-oracle-plain"></i><p>Oracle</p></span>
-                                <span><i class="bx bx-bar-chart-alt"></i><p>PowerBI</p></span>
+                                <span><i class="devicon-mysql-plain"></i>
+                                    <p>MySQL</p>
+                                </span>
+                                <span><i class="bx bxl-mongodb"></i>
+                                    <p>MongoDB</p>
+                                </span>
+                                <span><i class="devicon-oracle-plain"></i>
+                                    <p>Oracle</p>
+                                </span>
+                                <span><i class="bx bx-bar-chart-alt"></i>
+                                    <p>PowerBI</p>
+                                </span>
                             </div>
                         </div>
 
                         <div class="skills-content">
-                            <h3>Tools</h3>
+                            <h3>Outils</h3>
                             <div class="content">
-                                <span><i class="devicon-git-plain"></i><p>Git</p></span>
-                                <span><i class="devicon-github-original"></i><p>GitHub</p></span>
-                                <span><i class="devicon-vscode-plain"></i><p>VS Code</p></span>
-                                <span><i class="devicon-intellij-plain"></i><p>IntelliJ</p></span>
-                                <span><i class="devicon-eclipse-plain"></i><p>Eclipse</p></span>
-                                <span><i class="devicon-rstudio-plain"></i><p>RStudio</p></span>
-                                <span><i class="bx bx-code-block"></i><p>Thonny</p></span>
-                                
-                                <span><i class="devicon-linux-plain"></i><p>Linux</p></span>
-                                <span><i class="bx bx-chip"></i><p>VirtualBox</p></span>
-                                <span><i class="devicon-powershell-plain"></i><p>PowerShell</p></span>
+                                <span><i class="devicon-git-plain"></i>
+                                    <p>Git</p>
+                                </span>
+                                <span><i class="devicon-github-original"></i>
+                                    <p>GitHub</p>
+                                </span>
+                                <span><i class="devicon-vscode-plain"></i>
+                                    <p>VS Code</p>
+                                </span>
+                                <span><i class="devicon-intellij-plain"></i>
+                                    <p>IntelliJ</p>
+                                </span>
+                                <span><i class="devicon-eclipse-plain"></i>
+                                    <p>Eclipse</p>
+                                </span>
+                                <span><i class="devicon-rstudio-plain"></i>
+                                    <p>RStudio</p>
+                                </span>
+                                <span><i class="bx bx-code-block"></i>
+                                    <p>Thonny</p>
+                                </span>
 
-                                <span><i class="bx bx-cylinder"></i><p>phpMyAdmin</p></span>
-                                <span><i class="bx bx-atom"></i><p>Antigravity</p></span>
+                                <span><i class="devicon-linux-plain"></i>
+                                    <p>Linux</p>
+                                </span>
+                                <span><i class="bx bx-chip"></i>
+                                    <p>VirtualBox</p>
+                                </span>
+                                <span><i class="devicon-powershell-plain"></i>
+                                    <p>PowerShell</p>
+                                </span>
+
+                                <span><i class="bx bx-cylinder"></i>
+                                    <p>phpMyAdmin</p>
+                                </span>
+                                <span><i class="bx bx-atom"></i>
+                                    <p>Antigravity</p>
+                                </span>
                             </div>
                         </div>
 
@@ -186,13 +269,14 @@
             <div class="book-page page-right turn" id="turn-2">
                 <!-- page 3 (my services) -->
                 <div class="page-front">
-                    <h1 class="title">My Services</h1>
+                    <h1 class="title">Mes Services</h1>
 
                     <div class="services-box">
                         <div class="services-content">
                             <i class='bx bx-code-alt'></i>
                             <h3>Développement d’applications web</h3>
-                            <p>Conception d’applications web dynamiques avec gestion des utilisateurs, bases de données et interfaces interactives.</p>
+                            <p>Conception d’applications web dynamiques avec gestion des utilisateurs, bases de données
+                                et interfaces interactives.</p>
                             <!--
                             <a href="#" class="btn">Read More</a>
                             -->
@@ -201,7 +285,8 @@
                         <div class="services-content">
                             <i class='bx bxs-data'></i>
                             <h3>Conception & gestion de bases de données</h3>
-                            <p>Modélisation de bases de données (MCD/MLD) et création de requêtes SQL pour gérer et exploiter les données.</p>
+                            <p>Modélisation de bases de données (MCD/MLD) et création de requêtes SQL pour gérer et
+                                exploiter les données.</p>
                             <!--
                             <a href="#" class="btn">Read More</a>
                             -->
@@ -210,7 +295,8 @@
                         <div class="services-content">
                             <i class='bx bx-server'></i>
                             <h3>Développement d’API REST</h3>
-                            <p>Création d’API permettant la communication entre les interfaces web et les bases de données.</p>
+                            <p>Création d’API permettant la communication entre les interfaces web et les bases de
+                                données.</p>
                             <!--
                             <a href="#" class="btn">Read More</a>
                             -->
@@ -236,7 +322,7 @@
 
                 <!-- page 4 (latest project or my portfolio) -->
                 <div class="page-back">
-                    <h1 class="title">Latest Projects</h1>
+                    <h1 class="title">Derniers Projets</h1>
 
                     <div class="portfolio-box">
                         <div class="img-box">
@@ -246,21 +332,23 @@
                         <div class="info-box">
                             <div class="info-title">
                                 <h3>games_on_web</h3>
-                                <a href="https://games-on-web-eta.vercel.app/">Live Preview<i class='bx bx-link-external'></i></a>
+                                <a href="https://games-on-web-eta.vercel.app/">Aperçu en direct<i
+                                        class='bx bx-link-external'></i></a>
                             </div>
-                            <p>Tech Used:</p>
-                            <p><strong>Frontend:</strong> HTML, CSS, JavaScript
+                            <p>Technologies utilisées :</p>
+                            <p><strong>Front-end :</strong> HTML, CSS, JavaScript
                                 <br>
-                            <strong>Backend:</strong> Node.js
+                                <strong>Back-end :</strong> Node.js
                                 <br>
-                            <strong>Database:</strong> MongoDB
+                                <strong>Base de données :</strong> MongoDB
                                 <br>
-                            <strong>Tools:</strong> Git, VS Code</p>
+                                <strong>Outils :</strong> Git, VS Code
+                            </p>
                         </div>
 
                         <div class="btn-box">
-                            <a href="https://github.com/khalilouro/games_on_web" class="btn">Source Code</a>
-                            <a href="projet.html" class="btn">More Projects</a>
+                            <a href="https://github.com/khalilouro/games_on_web" class="btn">Code Source</a>
+                            <a href="projet.html" class="btn">Plus de projets</a>
                         </div>
                     </div>
 
@@ -278,13 +366,14 @@
             <div class="book-page page-right turn" id="turn-3">
                 <!-- page 5 (work experience) -->
                 <div class="page-front">
-                    <h1 class="title">Work Experience</h1>
+                    <h1 class="title">Expérience Professionnelle</h1>
 
                     <div class="workeduc-box">
                         <div class="workeduc-content">
                             <span class="year"><i class='bx bxs-calendar'></i>2024</span>
                             <h3>Équipier polyvalent – McDonald’s </h3>
-                            <p><p>
+                            <p>
+                            <p>
                         </div>
                     </div>
 
@@ -306,7 +395,7 @@
                                 <div class="dot"></div>
                             </div>
                         </div>
-                        <div class="text">In Progress</div>
+                        <div class="text">En cours</div>
                     </div>
 
                     <span class="number-page">5</span>
@@ -319,15 +408,16 @@
 
                 <!-- page 6 (contact me) -->
                 <div class="page-back">
-                    <h1 class="title">Contact Me!</h1>
+                    <h1 class="title">Contactez-moi !</h1>
 
                     <div class="contact-box">
                         <form onsubmit="sendMail(event)">
-                            <input type="text" id="name" class="field" placeholder="Full Name" required>
-                            <input type="email" id="email" class="field" placeholder="Email Address" required>
-                            <input type="text" id="subject" class="field" placeholder="Subject" required>
-                            <textarea id="message" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
-                            <input type="submit" class="btn" value="Se²nd Message">
+                            <input type="text" id="name" class="field" placeholder="Nom Complet" required>
+                            <input type="email" id="email" class="field" placeholder="Adresse Email" required>
+                            <input type="text" id="subject" class="field" placeholder="Sujet" required>
+                            <textarea id="message" cols="30" rows="10" class="field" placeholder="Votre Message"
+                                required></textarea>
+                            <input type="submit" class="btn" value="Envoyer le Message">
                         </form>
                     </div>
                     <span class="number-page">6</span>
@@ -338,7 +428,7 @@
                     </span>
 
                     <a href="#" class="back-profile">
-                        <p>Profile</p>
+                        <p>Profil</p>
                         <i class='bx bxs-user'></i>
                     </a>
                 </div>
@@ -352,4 +442,3 @@
 
 
 </html>
-

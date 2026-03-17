@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil's Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- devicon icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "tRgAPnoowmlR5gIEc",
+            });
+        })();
+    </script>
+    <script>
+        // Mobile redirection
+        if (window.innerWidth < 768) {
+            window.location.href = "mobile_en.html";
+        }
+
+        // Localisation detection for reverse redirection (English to French)
+        if (window.location.pathname.endsWith('index_en.html')) {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.country_code === 'FR') {
+                        window.location.href = "index.html";
+                    }
+                })
+                .catch(error => {
+                    console.error('IP Detection Error:', error);
+                    // Fallback to browser language
+                    const userLang = navigator.language || navigator.userLanguage;
+                    if (userLang.startsWith("fr")) {
+                        window.location.href = "index.html";
+                    }
+                });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right"></div>
+
+        <div class="book">
+            <!-- profile page -->
+            <div class="book-page page-left">
+                <div class="profile-page">
+                    <img src="photo.png" alt="Rahmouni Khalil">
+                    <h1>Rahmouni Khalil</h1>
+                    <h3>L3 MIAGE Student</h3>
+
+                    <div class="social-media">
+                        <a href="https://github.com/khalilouro"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-khalil-rahmouni-6b867b36b/"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="mailto:rahmounimohamedkhalil@gmail.com"><i class="bx bxl-gmail"></i></a>
+                    </div>
+
+                    <p>L3 MIAGE Student at Université Côte d’Azur.<br>
+                        Treasury Quality Mission Officer at JMC.<br>
+                        Currently looking for a 3-month internship to strengthen my technical and functional skills.
+                    </p>
+
+                    <div class="btn-box">
+                        <a href="CV/CV.html" class="btn">Download CV</a>
+                        <a href="#" class="btn contact-me">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- page 1 & 2-->
+            <div class="book-page page-right turn" id="turn-1">
+                <!-- page 1 (education) -->
+                <div class="page-front">
+                    <h1 class="title">Education</h1>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2023 - present</span>
+                            <h3>MIAGE Bachelor - Université Côte d’Azur</h3>
+                            <p>Computer Science & Software Development<br>
+                                <span class="desc">Design, programming, and maintenance of applications in
+                                    C, Java, R, Web, with a solid base in algorithms and
+                                    systems architecture.<br></span>
+                                Business Management & Project Management<br>
+                                <span class="desc">Understanding organizational issues, agile project management,
+                                    economics, law, and management to bridge technique and strategy.<br></span>
+                                Data Analysis & Information Systems<br>
+                                <span class="desc">Database modeling, business intelligence, and
+                                    statistical analysis to optimize decision-making.</span>
+                            </p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2022 - 2023</span>
+                            <h3>High School Diploma - Flowers High School</h3>
+                            <p>Physical Sciences</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">1</span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-1">
+                        <i class='bx bxs-chevron-right'></i>
+                    </span>
+                </div>
+
+                <!-- page 2 (my skills)-->
+                <div class="page-back">
+                    <h1 class="title">My Skills</h1>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <h3>Front-End</h3>
+                            <div class="content">
+                                <span><i class='bx bxl-html5'></i>
+                                    <p>HTML5</p>
+                                </span>
+                                <span><i class='bx bxl-css3'></i>
+                                    <p> CSS3 </p>
+                                </span>
+                                <span><i class='bx bxl-javascript'></i>
+                                    <p> JavaScript </p>
+                                </span>
+                                <span><i class="devicon-babylonjs-plain"></i>
+                                    <p>Babylon.js</p>
+                                </span>
+                                <span><i class='bx bxl-markdown'></i>
+                                    <p> Markdown </p>
+                                </span>
+                                <span><i class='bx bx-sitemap'></i>
+                                    <p> Mermaid </p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-content">
+                            <h3>Programming</h3>
+                            <div class="content">
+                                <span><i class='bx bxl-php'></i>
+                                    <p> PHP </p>
+                                </span>
+                                <span><i class='bx bxl-nodejs'></i>
+                                    <p> Node.js </p>
+                                </span>
+                                <span><i class='bx bxl-python'></i>
+                                    <p> Python </p>
+                                </span>
+                                <span><i class="devicon-c-plain"></i>
+                                    <p> C </p>
+                                </span>
+                                <span><i class="bx bxl-java"></i>
+                                    <p> Java </p>
+                                </span>
+                                <span><i class="devicon-r-plain"></i>
+                                    <p> R </p>
+                                </span>
+                                <span><i class="devicon-kotlin-plain"></i>
+                                    <p> Kotlin </p>
+                                </span>
+                                <span><i class="bx bx-data"></i>
+                                    <p>SQL</p>
+                                </span>
+                                <span><i class='devicon-json-plain'></i>
+                                    <p> Json </p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-content">
+                            <h3>Database / BI</h3>
+                            <div class="content">
+                                <span><i class="devicon-mysql-plain"></i>
+                                    <p>MySQL</p>
+                                </span>
+                                <span><i class="bx bxl-mongodb"></i>
+                                    <p>MongoDB</p>
+                                </span>
+                                <span><i class="devicon-oracle-plain"></i>
+                                    <p>Oracle</p>
+                                </span>
+                                <span><i class="bx bx-bar-chart-alt"></i>
+                                    <p>PowerBI</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-content">
+                            <h3>Tools</h3>
+                            <div class="content">
+                                <span><i class="devicon-git-plain"></i>
+                                    <p>Git</p>
+                                </span>
+                                <span><i class="devicon-github-original"></i>
+                                    <p>GitHub</p>
+                                </span>
+                                <span><i class="devicon-vscode-plain"></i>
+                                    <p>VS Code</p>
+                                </span>
+                                <span><i class="devicon-intellij-plain"></i>
+                                    <p>IntelliJ</p>
+                                </span>
+                                <span><i class="devicon-linux-plain"></i>
+                                    <p>Linux</p>
+                                </span>
+                                <span><i class="bx bx-chip"></i>
+                                    <p>VirtualBox</p>
+                                </span>
+                                <span><i class="bx bx-atom"></i>
+                                    <p>Antigravity</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="number-page">2</span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-1">
+                        <i class='bx bxs-chevron-left'></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- page 3 & 4-->
+            <div class="book-page page-right turn" id="turn-2">
+                <!-- page 3 (my services) -->
+                <div class="page-front">
+                    <h1 class="title">My Services</h1>
+
+                    <div class="services-box">
+                        <div class="services-content">
+                            <i class='bx bx-code-alt'></i>
+                            <h3>Web Application Development</h3>
+                            <p>Design of dynamic web applications with user management, databases, and interactive
+                                interfaces.</p>
+                        </div>
+
+                        <div class="services-content">
+                            <i class='bx bxs-data'></i>
+                            <h3>Database Design & Management</h3>
+                            <p>Database modeling (ERD) and creation of SQL queries to manage and exploit data.</p>
+                        </div>
+
+                        <div class="services-content">
+                            <i class='bx bx-server'></i>
+                            <h3>REST API Development</h3>
+                            <p>Creation of APIs allowing communication between web interfaces and databases.</p>
+                        </div>
+
+                        <div class="services-content">
+                            <i class='bx bx-network-chart'></i>
+                            <h3>Data Analysis & Automation</h3>
+                            <p>Analysis and processing of data with Python and R to automate tasks.</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">3</span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-2">
+                        <i class='bx bxs-chevron-right'></i>
+                    </span>
+                </div>
+
+                <!-- page 4 (latest project or my portfolio) -->
+                <div class="page-back">
+                    <h1 class="title">My Portfolio</h1>
+
+                    <div class="portfolio-box">
+                        <div class="img-box">
+                            <img src="games_on_web.png" alt="Games On Web Project">
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-title">
+                                <h3>games_on_web</h3>
+                                <a href="https://games-on-web-eta.vercel.app/">Live Preview<i
+                                        class='bx bx-link-external'></i></a>
+                            </div>
+                            <p>Tech Used:</p>
+                            <p><strong>Frontend:</strong> HTML, CSS, JavaScript
+                                <br>
+                                <strong>Backend:</strong> Node.js
+                                <br>
+                                <strong>Database:</strong> MongoDB
+                                <br>
+                                <strong>Tools:</strong> Git, VS Code
+                            </p>
+                        </div>
+
+                        <div class="btn-box">
+                            <a href="https://github.com/khalilouro/games_on_web" class="btn">Source Code</a>
+                            <a href="projet_en.html" class="btn">More Projects</a>
+                        </div>
+                    </div>
+
+                    <span class="number-page">4</span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn back" data-page="turn-2">
+                        <i class='bx bxs-chevron-left'></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- page 5 & 6-->
+            <div class="book-page page-right turn" id="turn-3">
+                <!-- page 5 (work experience) -->
+                <div class="page-front">
+                    <h1 class="title">Professional Experience</h1>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2024</span>
+                            <h3>Versatile Crew Member – McDonald’s </h3>
+                        </div>
+                    </div>
+
+                    <div class="container2">
+                        <div class="wrapper2">
+                            <div class="loader">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="loader">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="loader">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="loader">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="loader">
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                        <div class="text">In Progress</div>
+                    </div>
+
+                    <span class="number-page">5</span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-3">
+                        <i class='bx bxs-chevron-right'></i>
+                    </span>
+                </div>
+
+                <!-- page 6 (contact me) -->
+                <div class="page-back">
+                    <h1 class="title">Contact Me!</h1>
+
+                    <div class="contact-box">
+                        <form onsubmit="sendMail(event)">
+                            <input type="text" id="name" class="field" placeholder="Full Name" required>
+                            <input type="email" id="email" class="field" placeholder="Email Address" required>
+                            <input type="text" id="subject" class="field" placeholder="Subject" required>
+                            <textarea id="message" cols="30" rows="10" class="field" placeholder="Your Message"
+                                required></textarea>
+                            <input type="submit" class="btn" value="Send Message">
+                        </form>
+                    </div>
+                    <span class="number-page">6</span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-3">
+                        <i class='bx bxs-chevron-left'></i>
+                    </span>
+
+                    <a href="#" class="back-profile">
+                        <p>Profile</p>
+                        <i class='bx bxs-user'></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
