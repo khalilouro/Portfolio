@@ -279,7 +279,7 @@ body {
 .loader {
     height: 50px;
     width: 50px;
-    bottom: 80px;
+    bottom: 210px;
     position: absolute;
     animation: rotate 3.5s linear infinite;
 }
@@ -343,7 +343,7 @@ body {
 .container2 .text {
     position: absolute;
     color: var(--main-color);
-    bottom: 10px;
+    bottom: 135px;
     left: 175px;
     font-size: 25px;
     font-weight: 400;

@@ -217,7 +217,7 @@ section {
 .container2 {
     position: relative;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: -8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -229,6 +229,7 @@ section {
     position: relative;
     width: 50px;
     height: 50px;
+    transform: translateY(-13rem);
 }
 
 .loader {
